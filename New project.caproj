@@ -47,7 +47,7 @@
     <object-folder>
         <object-type name="Grass" sid="3441019752015046">
             <plugin id="TiledBg" />
-            <texture />
+            <texture original-source="E:\Construct files\Grass0003_1_270.jpg" />
         </object-type>
         <object-type name="Border_Walls" sid="5526123547623856">
             <plugin id="Sprite" />
@@ -86,19 +86,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Small_Bullet" sid="6864647788882656">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Bullet" sid="9395162362227178">
-                    <behavior id="Bullet" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5237034047213213" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="camera" sid="8565090475629956">
             <plugin id="Sprite" />
             <behaviors>
@@ -112,13 +99,250 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="rocks" sid="7566256320641344">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="1423965531649184">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="267172555420163" speed="5">
+                    <frame duration="1" hotspotX="-0.576923" hotspotY="0.5" original-source="E:\Downloads\process-scaled.png">
+                        <collision-poly>
+                            <point x="0.146155" y="0.0846154" />
+                            <point x="0.453847" y="0.00769231" />
+                            <point x="0.838462" y="0.161538" />
+                            <point x="0.930769" y="0.261538" />
+                            <point x="0.992308" y="0.569231" />
+                            <point x="0.938463" y="0.823077" />
+                            <point x="0.584616" y="0.984615" />
+                            <point x="0.00769301" y="0.807692" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="explosion" sid="6512453370260791">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6562950477507734" speed="20">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tower" sid="3776883026756459">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5929636402581085">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="851979537465096" speed="5">
+                    <frame duration="1" hotspotX="1.56643" hotspotY="0.511737" original-source="E:\Downloads\5e8d00fdda6a1ea64d5dc3e27e78f1cb.png">
+                        <collision-poly>
+                            <point x="0.510489" y="0.596244" />
+                            <point x="0.685315" y="0.605634" />
+                            <point x="0.559441" y="0.600939" />
+                            <point x="0.734266" y="0.584507" />
+                            <point x="0.944056" y="0.605634" />
+                            <point x="0.814685" y="0.605634" />
+                            <point x="0.797203" y="0.962441" />
+                            <point x="0.566434" y="0.99061" />
+                            <point x="0.412587" y="0.983568" />
+                            <point x="0.174825" y="0.948357" />
+                            <point x="0.174825" y="0.596244" />
+                            <point x="0.0664336" y="0.59507" />
+                            <point x="0.412587" y="0.598592" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="invis_door" sid="1413731688258656">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3606974877603154" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="back_background" sid="6961587594572931">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="tower_tiles" sid="3730032715728874">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="781633234433194" speed="5">
+                    <frame duration="1" hotspotX="1.04498" hotspotY="2.8227" original-source="E:\Downloads\celianna_carpentrytiles.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tower_stairs" sid="6738548128701551">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5253307222560012" speed="5">
+                    <frame duration="1" hotspotX="2.28788" hotspotY="2.58427" original-source="E:\Downloads\celianna_carpentrytiles.png">
+                        <collision-poly>
+                            <point x="0" y="0.280899" />
+                            <point x="1" y="0.0449438" />
+                            <point x="1" y="0.516854" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tower_table" sid="4394545562698179">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5496249557765804" speed="5">
+                    <frame duration="1" hotspotX="3.03846" hotspotY="2.69136" original-source="E:\Downloads\celianna_carpentrytiles.png">
+                        <collision-poly>
+                            <point x="0.128543" y="0.284063" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.338159" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0.269118" y="1" />
+                            <point x="0.0020243" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tower_piano" sid="7977169001401557">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6365964134854071" speed="5">
+                    <frame duration="1" hotspotX="0.3375" hotspotY="-1.19388" original-source="E:\Downloads\celianna_carpentrytiles.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.3375" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.673469" />
+                            <point x="0.3375" y="0.989796" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tower_doorway" sid="2312466513851494">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6271159988056274" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tower_spawner" sid="1831864563331464">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3442304599569855" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="small_bullet" sid="4752307540124435">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="5772356006173987">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5679595683614684" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511111" original-source="E:\Downloads\BulletD166.png">
+                        <collision-poly>
+                            <point x="0.13" y="0.26" />
+                            <point x="0.5" y="0.228889" />
+                            <point x="0.844444" y="0.311111" />
+                            <point x="0.982222" y="0.5" />
+                            <point x="0.812222" y="0.624444" />
+                            <point x="0.5" y="0.688889" />
+                            <point x="0.166667" y="0.666667" />
+                            <point x="0.00444444" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="small_bullet_layer_2" sid="518873394941601">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="5957053006305058">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3479169766401297" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511111" original-source="E:\Downloads\BulletD166.png">
+                        <collision-poly>
+                            <point x="0.195" y="0.138298" />
+                            <point x="0.5" y="0" />
+                            <point x="0.775" y="0.159574" />
+                            <point x="0.845" y="0.5" />
+                            <point x="0.605" y="0.719858" />
+                            <point x="0.5" y="0.730496" />
+                            <point x="0.425" y="0.698582" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tower_tiles2" sid="1838388451418867">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4650896380678508" speed="5">
+                    <frame duration="1" hotspotX="0.501241" hotspotY="0.501484" original-source="E:\floortiles.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Out" sid="8361169236349005">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8992684460859397" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Layout 1.xml</layout>
+        <layout>Layout 2.xml</layout>
+        <layout>Layout 3.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
+        <event-sheet>Event sheet 3.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="6" />

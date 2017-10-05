@@ -24,8 +24,8 @@
             </conditions>
             <actions>
                 <action id="-3" name="Set position" sid="4017974966951565" type="camera">
-                    <param id="0" name="X">lerp(Self.X, Player_1.X, 0.03)</param>
-                    <param id="1" name="Y">lerp(Self.Y, Player_1.Y-150, 0.03)</param>
+                    <param id="0" name="X">lerp(Self.X, Player_1.X, 0.09)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Player_1.Y-150, 0.09)</param>
                 </action>
             </actions>
         </event-block>
@@ -40,11 +40,63 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="1048419323362275" type="Gun">
-                    <param id="0" name="Object">Small_Bullet</param>
+                <action id="0" name="Spawn another object" sid="52538173332736" type="Gun">
+                    <param id="0" name="Object">small_bullet</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">0</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="2538901143348765">
+            <conditions>
+                <condition id="4" name="On finished" sid="7779249368889396" type="explosion">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2613076320464612" type="explosion" />
+            </actions>
+        </event-block>
+        <event-block sid="5475619214534346">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="5870768269267828" type="Player_1">
+                    <param id="0" name="Object">invis_door</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="7088042968745581" type="System">
+                    <param id="0" name="Layout">&quot;Layout 2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3141026065807754">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7960097957894369" type="small_bullet">
+                    <param id="0" name="Object">rocks</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="8646137511586613" type="small_bullet">
+                    <param id="0" name="Object">explosion</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="3587901583644386" type="small_bullet" />
+            </actions>
+        </event-block>
+        <event-block sid="4024121783489024">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9241929828481854" type="small_bullet">
+                    <param id="0" name="Object">tower</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="9890548677582795" type="small_bullet">
+                    <param id="0" name="Object">explosion</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9381851126143366" type="small_bullet" />
             </actions>
         </event-block>
     </events>
