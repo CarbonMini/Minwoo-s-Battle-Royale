@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="9020283031489921">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6452392572639313" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="7541192944906341" type="Gun">
+                    <param id="0" name="X">Player_1.X</param>
+                    <param id="1" name="Y">Player_1.Y</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="2488945888891391" type="Gun">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9701075522476242">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6601590607745048" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="4017974966951565" type="camera">
+                    <param id="0" name="X">lerp(Self.X, Player_1.X, 0.03)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Player_1.Y-150, 0.03)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6186683657757085">
+            <conditions>
+                <condition id="0" name="On click" sid="3243579371346581" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="7521338166590179" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="1048419323362275" type="Gun">
+                    <param id="0" name="Object">Small_Bullet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
