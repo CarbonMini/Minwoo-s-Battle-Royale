@@ -89,5 +89,53 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="3168887876923697">
+            <conditions>
+                <condition id="2" name="Key is down" sid="2866234350194739" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="9083891944260607" type="Player_1">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3906001537743231">
+            <conditions>
+                <condition id="2" name="Key is down" sid="5786408257749744" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="4518618171201394" type="Player_1">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3899312817845906">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1404224444919124" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="9929843872517552" type="Player_1">
+                    <param id="0" name="Control">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5646670293319027">
+            <conditions>
+                <condition id="2" name="Key is down" sid="8186398437970288" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="9374220194555606" type="Player_1">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
