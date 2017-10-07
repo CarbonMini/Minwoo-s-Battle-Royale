@@ -13,21 +13,24 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout active="1" order="0">Layout 1</layout>
         <layout order="2">Layout 2</layout>
         <layout order="4">Layout 3</layout>
+        <layout order="6">Layout 4</layout>
         <event-sheet order="1">Event sheet 1</event-sheet>
         <event-sheet order="3">Event sheet 2</event-sheet>
+        <event-sheet order="5">Event sheet 3</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
         <property expanded="1" name="Project settings" />
-        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1" />
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="layout-folder/" />
-        <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="file-folder/" />
+        <folder expanded="0" path="object-folder/" />
+        <folder expanded="0" path="layout-folder/" />
+        <folder expanded="0" path="layout-folder/Layouts/" />
+        <folder expanded="0" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
@@ -54,5 +57,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/large_gun/" />
         <folder expanded="1" path="animation-folder/Pine_Tree/" />
         <folder expanded="1" path="animation-folder/Pixel_tree/" />
+        <folder expanded="1" path="animation-folder/menu_background/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/start/" />
+        <folder expanded="1" path="animation-folder/player_spawner/" />
+        <folder expanded="1" path="animation-folder/tree2/" />
+        <folder expanded="1" path="animation-folder/detailed_grass/" />
+        <folder expanded="1" path="animation-folder/legit_grass/" />
+        <folder expanded="1" path="animation-folder/legit_grass_turf/" />
+        <folder expanded="1" path="animation-folder/legit_grass_turf_2/" />
+        <folder expanded="1" path="animation-folder/lake_water/" />
+        <folder expanded="1" path="animation-folder/light_lake/" />
+        <folder expanded="1" path="animation-folder/dark_lake/" />
+        <folder expanded="1" path="animation-folder/light_lake_turf/" />
     </folders-expanded>
 </c2uistate>

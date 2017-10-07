@@ -3,138 +3,353 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 2</name>
     <events>
-        <event-block sid="9656746916868607">
+        <variable comment="Health of Player 1" constant="0" name="Player_1_Health" sid="2487817108187933" static="0" type="number">100</variable>
+        <variable comment="DoesTheSmallGunStillBloodyExist" constant="0" name="DoesTheSmallGunStillBloodyExist" sid="7099164108072742" static="0" type="number">1</variable>
+        <event-block sid="9020283031489921">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="8114133000519182" type="Player_1">
-                    <param id="0" name="Object">tower_doorway</param>
-                </condition>
+                <condition id="-1" name="Every tick" sid="6452392572639313" type="System" />
             </conditions>
             <actions>
-                <action id="-25" name="Go to layout (by name)" sid="2979354493667165" type="System">
-                    <param id="0" name="Layout">&quot;Layout 3&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="4193085221227046">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="6903805194965427" type="System" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="3700692774933766" type="Gun">
+                <action id="-3" name="Set position" sid="7541192944906341" type="Gun">
                     <param id="0" name="X">Player_1.X</param>
                     <param id="1" name="Y">Player_1.Y</param>
                 </action>
-                <action id="-22" name="Set angle toward position" sid="7918882275207258" type="Gun">
+                <action id="-22" name="Set angle toward position" sid="2488945888891391" type="Gun">
                     <param id="0" name="X">Mouse.X</param>
                     <param id="1" name="Y">Mouse.Y</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="9490656639121076">
+        <event-block sid="9701075522476242">
             <conditions>
-                <condition id="-1" name="Every tick" sid="7028778310019082" type="System" />
+                <condition id="-1" name="Every tick" sid="6601590607745048" type="System" />
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="3980319633086246" type="camera">
+                <action id="-3" name="Set position" sid="4017974966951565" type="camera">
                     <param id="0" name="X">lerp(Self.X, Player_1.X, 0.09)</param>
                     <param id="1" name="Y">lerp(Self.Y, Player_1.Y-150, 0.09)</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="7654432870394185">
+        <event-block sid="6186683657757085">
             <conditions>
-                <condition id="0" name="On click" sid="6042162577345308" type="Mouse">
+                <condition id="0" name="On click" sid="3243579371346581" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
                 </condition>
-                <condition id="-6" name="Every X seconds" sid="7025351703016849" type="System">
+                <condition id="-6" name="Every X seconds" sid="7521338166590179" type="System">
                     <param id="0" name="Interval (seconds)">0.5</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="446879774906424" type="Gun">
-                    <param id="0" name="Object">small_bullet_layer_2</param>
-                    <param id="1" name="Layer">0</param>
+                <action id="0" name="Spawn another object" sid="52538173332736" type="Gun">
+                    <param id="0" name="Object">small_bullet</param>
+                    <param id="1" name="Layer">5</param>
                     <param id="2" name="Image point">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="985304244304888">
+        <event-block sid="2538901143348765">
             <conditions>
-                <condition id="4" name="On finished" sid="5182508668385629" type="explosion">
+                <condition id="4" name="On finished" sid="7779249368889396" type="explosion">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="4299530186644386" type="explosion" />
+                <action id="-9" name="Destroy" sid="2613076320464612" type="explosion" />
             </actions>
         </event-block>
-        <event-block sid="4445009672628713">
+        <event-block sid="5475619214534346">
             <conditions>
-                <condition id="-1" name="Every tick" sid="9055638503215081" type="System" />
-            </conditions>
-            <actions>
-                <action id="-24" name="Move to top" sid="8283054436405047" type="small_bullet_layer_2" />
-            </actions>
-        </event-block>
-        <event-block sid="4592607025329489">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="9152379381449084" type="Player_1">
-                    <param id="0" name="Object">Out</param>
+                <condition id="1" name="Is overlapping another object" sid="5870768269267828" type="Player_1">
+                    <param id="0" name="Object">invis_door</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-25" name="Go to layout (by name)" sid="9286575725711675" type="System">
-                    <param id="0" name="Layout">&quot;Layout 1&quot;</param>
+                <action id="-25" name="Go to layout (by name)" sid="7088042968745581" type="System">
+                    <param id="0" name="Layout">&quot;Layout 2&quot;</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="3168887876923697">
+        <event-block sid="3141026065807754">
             <conditions>
-                <condition id="2" name="Key is down" sid="2866234350194739" type="Keyboard">
+                <condition id="0" name="On collision with another object" sid="7960097957894369" type="small_bullet">
+                    <param id="0" name="Object">rocks</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="8646137511586613" type="small_bullet">
+                    <param id="0" name="Object">explosion</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="3587901583644386" type="small_bullet" />
+            </actions>
+        </event-block>
+        <event-block sid="4024121783489024">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9241929828481854" type="small_bullet">
+                    <param id="0" name="Object">tower</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="9890548677582795" type="small_bullet">
+                    <param id="0" name="Object">explosion</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9381851126143366" type="small_bullet" />
+            </actions>
+        </event-block>
+        <event-block sid="9217973042358567">
+            <conditions>
+                <condition id="2" name="Key is down" sid="9162333076990689" type="Keyboard">
                     <param id="0" name="Key">87 (W)</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="9083891944260607" type="Player_1">
+                <action behavior="8Direction" id="7" name="Simulate control" sid="704931403550047" type="Player_1">
                     <param id="0" name="Control">2</param>
                 </action>
+                <action id="4" name="Set animation" sid="4102507497698715" type="Player_1">
+                    <param id="0" name="Animation">&quot;Up&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="8" name="Set flipped" sid="9578520664124717" type="Gun">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="4073275624966974" type="large_gun" />
+                <action id="8" name="Set flipped" sid="3141723660388493" type="large_gun">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="890414809789752" type="Gun" />
             </actions>
         </event-block>
-        <event-block sid="3906001537743231">
+        <event-block sid="1543795355518339">
             <conditions>
-                <condition id="2" name="Key is down" sid="5786408257749744" type="Keyboard">
+                <condition id="2" name="Key is down" sid="9728319097365813" type="Keyboard">
                     <param id="0" name="Key">65 (A)</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="4518618171201394" type="Player_1">
+                <action behavior="8Direction" id="7" name="Simulate control" sid="7390079028242251" type="Player_1">
                     <param id="0" name="Control">0</param>
                 </action>
+                <action id="4" name="Set animation" sid="7931594751753361" type="Player_1">
+                    <param id="0" name="Animation">&quot;Left&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="8" name="Set flipped" sid="978776505926707" type="Gun">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="527903562807683" type="large_gun" />
+                <action id="8" name="Set flipped" sid="9572221733909092" type="large_gun">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-24" name="Move to top" sid="8583072271419602" type="Gun" />
             </actions>
         </event-block>
-        <event-block sid="3899312817845906">
+        <event-block sid="5942002209264843">
             <conditions>
-                <condition id="2" name="Key is down" sid="1404224444919124" type="Keyboard">
+                <condition id="2" name="Key is down" sid="8968710341845758" type="Keyboard">
                     <param id="0" name="Key">83 (S)</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="9929843872517552" type="Player_1">
+                <action behavior="8Direction" id="7" name="Simulate control" sid="7466667286494987" type="Player_1">
                     <param id="0" name="Control">3</param>
                 </action>
+                <action id="4" name="Set animation" sid="1703249139376338" type="Player_1">
+                    <param id="0" name="Animation">&quot;Down&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="8" name="Set flipped" sid="1122041124302404" type="Gun">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-24" name="Move to top" sid="3633916574189934" type="large_gun" />
+                <action id="8" name="Set flipped" sid="8828921737411545" type="large_gun">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-24" name="Move to top" sid="787626376376315" type="Gun" />
             </actions>
         </event-block>
-        <event-block sid="5646670293319027">
+        <event-block sid="5776371061230617">
             <conditions>
-                <condition id="2" name="Key is down" sid="8186398437970288" type="Keyboard">
+                <condition id="2" name="Key is down" sid="6465383073096302" type="Keyboard">
                     <param id="0" name="Key">68 (D)</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="9374220194555606" type="Player_1">
+                <action behavior="8Direction" id="7" name="Simulate control" sid="9208716954760551" type="Player_1">
                     <param id="0" name="Control">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="2522007704266309" type="Player_1">
+                    <param id="0" name="Animation">&quot;Right&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="8" name="Set flipped" sid="6724346503646047" type="Gun">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-24" name="Move to top" sid="6196905791554055" type="large_gun" />
+                <action id="8" name="Set flipped" sid="2775586869334814" type="large_gun">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-24" name="Move to top" sid="3812915480758283" type="Gun" />
+            </actions>
+        </event-block>
+        <event-block sid="6960780948429962">
+            <conditions>
+                <condition id="3" name="On key released" sid="6305799577191904" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="6993558630614136" type="Player_1">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="335874940497512">
+            <conditions>
+                <condition id="3" name="On key released" sid="6964352980297302" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="2855270361213921" type="Player_1">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5967438298942057">
+            <conditions>
+                <condition id="3" name="On key released" sid="5330633997426909" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="1832696653083096" type="Player_1">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4677543970195596">
+            <conditions>
+                <condition id="3" name="On key released" sid="1352929109656078" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="4458723937542673" type="Player_1">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6208761940833536">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="194421563514756" type="Player_1">
+                    <param id="0" name="Object">Large_gun_point</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4597584643850658" type="Gun" />
+                <action id="-9" name="Destroy" sid="2997847820797085" type="Large_gun_point" />
+                <action id="-9" name="Set value" sid="4379933913739228" type="System">
+                    <param id="0" name="Variable">DoesTheSmallGunStillBloodyExist</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="804729922445457">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="992975779845858" type="System">
+                    <param id="0" name="Variable">DoesTheSmallGunStillBloodyExist</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="2540828243395866" type="large_gun">
+                    <param id="0" name="X">Player_1.X</param>
+                    <param id="1" name="Y">Player_1.Y</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="840520491869362" type="large_gun">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="1482085312283955">
+                    <conditions>
+                        <condition id="0" name="On click" sid="4053228504051109" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="2886868440193723" type="System">
+                            <param id="0" name="Interval (seconds)">0.2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="1385717307693759" type="large_gun">
+                            <param id="0" name="Object">small_bullet</param>
+                            <param id="1" name="Layer">5</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1260865719834808">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6789625558452156" type="System" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Move to bottom" sid="7009571144093521" type="Large_gun_point" />
+            </actions>
+        </event-block>
+        <event-block sid="5611869395479132">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="9800627171828703" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="5439717547704888" type="menu_text">
+                    <param id="0" name="Text">&quot;Health : &quot; &amp;Player_1_Health</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9753243321577437">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4645931420020585" type="small_bullet">
+                    <param id="0" name="Object">Pine_Tree</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="208035977001516" type="small_bullet">
+                    <param id="0" name="Object">explosion</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9539547671200627" type="small_bullet" />
+            </actions>
+        </event-block>
+        <event-block sid="5747977178383672">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="5814852475945151" type="Player_1">
+                    <param id="0" name="Object">legit_grass_turf</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Move to bottom" sid="5987573166613633" type="Gun" />
+            </actions>
+        </event-block>
+        <event-block sid="3766850775508062">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="181421912854647" type="Player_1">
+                    <param id="0" name="Object">legit_grass_turf_2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Move to bottom" sid="1859015789194866" type="Gun" />
             </actions>
         </event-block>
     </events>
